@@ -1,125 +1,201 @@
 html {
-    background-size: cover;
-    font-family: 'helvetica neue',sans-serif;
-    text-align: center;
-    font-size: 10px;
-  }
- 
-
-  body {
-    background: url('BeFunky-photo.jpg');
-    background-size: cover;
-    margin: 0;
-    font-size: 2rem;
-    display: flex;
-    flex: 1;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .clock {
-    width: 45rem;
-    height: 45rem;
-    border: 20px solid white;
-    border-radius: 50%;
-    margin: 50px auto;
-    position: relative;
-    padding: 2rem;
-    box-shadow:
-      0 0 0 40px rgba(0, 0, 0, 0.1),
-      inset 0 0 0 3px #000000,
-      inset 0 0 20px black,
-      0 0 10px rgba(0, 0, 0, 0.2);
-  }
-
-  .clock-face {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transform: translateY(-3px); /*account for the height of the clock hands*/
-    transform: rotate(180deg);
-  }
-
-  .clock-face::after {
-    content: '';
-    background-color: #000000;
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    top: 50.8%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    border-radius: 50%;
-    z-index: 10;
-  }
-
-  .number {
-    --rotate: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transform: rotate(var(--rotate));
-    color: #fff;
-  }
-
-  .number1 { --rotate: 210deg; }
-  .number2 { --rotate: 240deg; }
-  .number3 { --rotate: 270deg; }
-  .number4 { --rotate: 300deg; }
-  .number5 { --rotate: 330deg; }
-  .number6 { --rotate: 360deg; }
-  .number7 { --rotate: 30deg; }
-  .number8 { --rotate: 60deg; }
-  .number9 { --rotate: 90deg; }
-  .number10 { --rotate: 120deg; }
-  .number11 { --rotate: 150deg; }
-  .number12 { --rotate: 180deg; }
-
-  .inner1 { transform: rotate(-30deg); }
-  .inner2 { transform: rotate(-60deg); }
-  .inner3 { transform: rotate(-90deg); }
-  .inner4 { transform: rotate(-120deg); }
-  .inner5 { transform: rotate(-150deg); }
-  .inner6 { transform: rotate(-180deg); }
-  .inner7 { transform: rotate(-210deg); }
-  .inner8 { transform: rotate(-240deg); }
-  .inner9 { transform: rotate(-270deg); }
-  .inner10 { transform: rotate(-300deg); }
-  .inner11 { transform: rotate(-330deg); }
+  background-size: cover;
+  font-family: 'helvetica neue', sans-serif;
+  text-align: center;
+  font-size: 10px;
+}
 
 
-  .hand {
-    --rotation: 0;
-    width: 50%;
-    height: 3px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    background-color: rgb(0,0,0);
-    transform-origin: left;
-    transform: translateX(-50%);
-    z-index: 10;
-  }
-  .hand.hour-hand {
-    width: 40%;
-    height: 7px;
-    border-radius: 8px 8px 8px 8px ;
-    z-index: 11;
-  }
+body {
+  /* Note: This image file 'BeFunky-photo.jpg' must be in the same folder */
+  background: url('BeFunky-photo.jpg');
+  background-size: cover;
+  margin: 0;
+  font-size: 2rem;
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
 
-  .hand.min-hand {
-    width: 45%;
-    height: 7px;
-    border-radius: 8px 8px 8px 8px ;
-    z-index: 11;
-  }
+.clock {
+  width: 45rem;
+  height: 45rem;
+  border: 20px solid white;
+  border-radius: 50%;
+  margin: 50px auto;
+  position: relative;
+  padding: 2rem;
+  box-shadow:
+    0 0 0 40px rgba(0, 0, 0, 0.1),
+    inset 0 0 0 3px #000000,
+    inset 0 0 20px black,
+    0 0 10px rgba(0, 0, 0, 0.2);
+}
 
-  .hand.second-hand {
-    content: '';
-    background: rgb(179, 16, 94);
-    border-radius: 8px 8px 8px 8px ;
-    z-index: 12;
-    width: 50%;
-  }
+.clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* FIX: Combined both transform properties into one line.
+      Otherwise, only the last one is applied.
+    */
+  transform: translateY(-3px) rotate(180deg);
+}
+
+.clock-face::after {
+  content: '';
+  background-color: #000000;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 50.8%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.number {
+  --rotate: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform: rotate(var(--rotate));
+  color: #fff;
+}
+
+.number1 {
+  --rotate: 210deg;
+}
+
+.number2 {
+  --rotate: 240deg;
+}
+
+.number3 {
+  --rotate: 270deg;
+}
+
+.number4 {
+  --rotate: 300deg;
+}
+
+.number5 {
+  --rotate: 330deg;
+}
+
+.number6 {
+  --rotate: 360deg;
+}
+
+.number7 {
+  --rotate: 30deg;
+}
+
+.number8 {
+  --rotate: 60deg;
+}
+
+.number9 {
+  --rotate: 90deg;
+}
+
+.number10 {
+  --rotate: 120deg;
+}
+
+.number11 {
+  --rotate: 150deg;
+}
+
+.number12 {
+  --rotate: 180deg;
+}
+
+.inner1 {
+  transform: rotate(-30deg);
+}
+
+.inner2 {
+  transform: rotate(-60deg);
+}
+
+.inner3 {
+  transform: rotate(-90deg);
+}
+
+.inner4 {
+  transform: rotate(-120deg);
+}
+
+.inner5 {
+  transform: rotate(-150deg);
+}
+
+.inner6 {
+  transform: rotate(-180deg);
+}
+
+.inner7 {
+  transform: rotate(-210deg);
+}
+
+.inner8 {
+  transform: rotate(-240deg);
+}
+
+.inner9 {
+  transform: rotate(-270deg);
+}
+
+.inner10 {
+  transform: rotate(-300deg);
+}
+
+.inner11 {
+  transform: rotate(-330deg);
+}
+
+
+.hand {
+  /* FIX: This new setup correctly pivots the hands from the center.
+      - 'right: 50%' places the hand's right edge at the center.
+      - 'transform-origin: 100%' makes it rotate around that right edge.
+      - 'transform: translateY(-50%)' centers it vertically.
+    */
+  height: 3px;
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform-origin: 100%;
+  transform: translateY(-50%);
+  /* Base transform to center vertically */
+  z-index: 10;
+  /* We let the JS override the rotate transform */
+}
+
+.hand.hour-hand {
+  width: 40%;
+  height: 7px;
+  border-radius: 8px 8px 8px 8px;
+  z-index: 11;
+}
+
+.hand.min-hand {
+  width: 45%;
+  height: 7px;
+  border-radius: 8px 8px 8px 8px;
+  z-index: 11;
+}
+
+.hand.second-hand {
+  content: '';
+  background: rgb(179, 16, 94);
+  border-radius: 8px 8px 8px 8px;
+  z-index: 12;
+  width: 50%;
+}

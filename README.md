@@ -5,4 +5,9 @@ This project visually represents a real-time clock with hour, minute, and second
 
 ## Features
 
+-Real-time analog clock with smooth movement
+-Beautiful gradient background and glowing border
+-Responsive design for all screen sizes
+-Built using pure HTML, CSS, and JavaScript — no external libraries
+
 

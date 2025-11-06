@@ -12,4 +12,8 @@ This project visually represents a real-time clock with hour, minute, and second
 
 ## Technologies Used
 
+- HTML5 – for structure
+- CSS3 – for styling and animation
+- JavaScript (ES6) – for functionality and dynamic updates
+
 

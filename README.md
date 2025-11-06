@@ -10,4 +10,6 @@ This project visually represents a real-time clock with hour, minute, and second
 - Responsive design for all screen sizes
 - Built using pure HTML, CSS, and JavaScript — no external libraries
 
+## Technologies Used
+
 

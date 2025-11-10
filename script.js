@@ -16,7 +16,7 @@ function setdate() {
   const mindegrees = (((min + (seconds / 60)) / 60) * 360) + 90;
   mindhand.style.transform = `rotate(${mindegrees}deg)`;
 
-  // --- Hours (Corrected for 12-hr format and smooth movement) ---
+  //  Hours
   const hour = now.getHours();
   // We use (hour % 12) for the 12-hour format
   // We add the minutes' fraction to the hour for smooth movement

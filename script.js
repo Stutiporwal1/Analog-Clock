@@ -5,12 +5,12 @@ const hourhand = document.querySelector('.hour-hand');
 function setdate() {
   const now = new Date();
 
-  // --- Seconds ---
+  // Seconds
   const seconds = now.getSeconds();
   const seconddegrees = ((seconds / 60) * 360) + 90;
   secondhand.style.transform = `rotate(${seconddegrees}deg)`;
 
-  // --- Minutes (Corrected for smooth movement) ---
+  // Minutes 
   const min = now.getMinutes();
   // We add the seconds' fraction to the minute for a smoother tick
   const mindegrees = (((min + (seconds / 60)) / 60) * 360) + 90;

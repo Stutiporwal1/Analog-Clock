@@ -37,9 +37,6 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  /* FIX: Combined both transform properties into one line.
-      Otherwise, only the last one is applied.
-    */
   transform: translateY(-3px) rotate(180deg);
 }
 
@@ -160,11 +157,7 @@ body {
 
 
 .hand {
-  /* FIX: This new setup correctly pivots the hands from the center.
-      - 'right: 50%' places the hand's right edge at the center.
-      - 'transform-origin: 100%' makes it rotate around that right edge.
-      - 'transform: translateY(-50%)' centers it vertically.
-    */
+
   height: 3px;
   background-color: rgb(0, 0, 0);
   position: absolute;
@@ -174,7 +167,7 @@ body {
   transform: translateY(-50%);
   /* Base transform to center vertically */
   z-index: 10;
-  /* We let the JS override the rotate transform */
+
 }
 
 .hand.hour-hand {

@@ -7,7 +7,6 @@ html {
 
 
 body {
-  /* Note: This image file 'BeFunky-photo.jpg' must be in the same folder */
   background: url('BeFunky-photo.jpg');
   background-size: cover;
   margin: 0;
